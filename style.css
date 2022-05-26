@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Timer */
+
+#timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+  min-width: 410px;
+  min-height: 150px;
+  width: 30%;
+  height: 25%;
+  margin: 0 auto;
+}
+
+/* Buttons */
+
+#buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 478px;
+  min-height: 62px;
+  width: 35%;
+  height: 10%;
+  margin: 0 auto 30px;
+}
+.red-btn {
+  display: block;
+  width: 130px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(226, 0, 0);
+  border: none;
+}
+.red-btn:hover {
+  background-color: rgb(194, 1, 1);
+}
+.red-btn:active {
+  outline: 4px solid rgba(194, 1, 1, 0.205);
+}
+.red-btn:disabled {
+  outline: none;
+}
+.red-btn:disabled {
+  background-color: rgb(252, 174, 174);
+}
+
+/* Puzzle */
+
+#puzzle-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 70px;
+  min-width: 956px;
+  min-height: 344px;
+  width: 70%;
+  height: 55%;
+  margin: 0 auto;
+}
+
+/* block left */
+#block-right {
+  display: grid;
+  grid-template-columns: repeat(4, 86px);
+  grid-template-rows: repeat(4, 86px);
+  overflow: hidden;
+  font-size: 0;
+  min-width: 344px;
+  width: 36%;
+  height: 100%;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 0px 0 10px 0px black;
+}
+#block-left {
+  display: grid;
+  grid-template-columns: repeat(4, 86px);
+  grid-template-rows: repeat(4, 86px);
+  overflow: hidden;
+  font-size: 0;
+  width: 36%;
+  min-width: 344px;
+  height: 100%;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 0px 0 10px 0px black;
+}
+.lock {
+  display: block;
+  position: absolute;
+  top: 39vh;
+  left: 12vw;
+  width: 460px;
+  height: 350px;
+}
+
+/* boxes */
+
+.order1 {
+  order: 2;
+}
+.order2 {
+  order: 16;
+}
+.order3 {
+  order: 5;
+}
+.order4 {
+  order: 7;
+}
+.order5 {
+  order: 13;
+}
+.order6 {
+  order: 15;
+}
+.order7 {
+  order: 11;
+}
+.order8 {
+  order: 10;
+}
+.order9 {
+  order: 9;
+}
+.order10 {
+  order: 3;
+}
+.order11 {
+  order: 8;
+}
+.order12 {
+  order: 5;
+}
+.order13 {
+  order: 1;
+}
+.order14 {
+  order: 4;
+}
+.order15 {
+  order: 6;
+}
+.order16 {
+  order: 12;
+}
+
+/* puzzle pieces */
+
+.puzz-piece {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(image/Arsenal_FC.jpg);
+  background-size: 344px 344px;
+}
+
+.puzzle1 {
+  background-position: 0 0;
+}
+.puzzle2 {
+  background-position: 258px 0;
+}
+.puzzle3 {
+  background-position: 172px 0;
+}
+.puzzle4 {
+  background-position: 86px 344px;
+}
+.puzzle5 {
+  background-position: 344px 258px;
+}
+.puzzle6 {
+  background-position: 258px 258px;
+}
+.puzzle7 {
+  background-position: 172px 258px;
+}
+.puzzle8 {
+  background-position: 86px 258px;
+}
+.puzzle9 {
+  background-position: 344px 172px;
+}
+.puzzle10 {
+  background-position: 258px 172px;
+}
+.puzzle11 {
+  background-position: 172px 172px;
+}
+.puzzle12 {
+  background-position: 86px 172px;
+}
+.puzzle13 {
+  background-position: 344px 86px;
+}
+.puzzle14 {
+  background-position: 258px 86px;
+}
+.puzzle15 {
+  background-position: 172px 86px;
+}
+.puzzle16 {
+  background-position: 86px 86px;
+}
+
+/* window opacity */
+
+.back-black {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.288);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* window message */
+
+.check-window {
+  display: none;
+  flex-flow: column nowrap;
+  width: 500px;
+  height: 150px;
+  background-color: white;
+  position: absolute;
+  top: 1vh;
+  left: 31.5vw;
+  border: 1px solid rgb(122, 122, 122);
+  border-radius: 5px;
+}
+.text-area1,
+.text-area2 {
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 63px;
+  border: 2px solid lightgrey;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+.check-close-box,
+#close-2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+}
+
+.checked-window {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 500px;
+  height: 150px;
+  background-color: white;
+  position: absolute;
+  top: 7vh;
+  left: 31.5vw;
+  border: 1px solid rgb(122, 122, 122);
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.close-1,
+.close-2,
+.check {
+  display: block;
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 0 5px;
+  color: white;
+  background-color: rgb(226, 0, 0);
+  border: none;
+}
+.check {
+  background-color: rgb(40, 221, 4);
+}
+.close-1:hover,
+.close-2:hover {
+  background-color: rgb(194, 1, 1);
+}
+.check:hover {
+  background-color: rgb(33, 194, 1);
+}
